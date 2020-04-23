@@ -23,6 +23,9 @@ import in.dream_lab.goffish.api.AbstractSubgraphComputation;
  * vertices in which neither of them repeats. 4-cycle can be
  * classified into seven types based on the location of its vertices.
  *
+ * Note : This Program only counts since topic was enumerative algorithm
+ * but we can also show 4-cycles since we are passing vertices in messages to next Super-Step
+ *
  * @author Shivam Singh
  *
  * Link to Code : https://github.com/shivam496/Algorithms-Implemented-Using-GoFFish/blob/master/QuadCount.java
