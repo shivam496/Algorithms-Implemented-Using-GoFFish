@@ -24,6 +24,11 @@ import in.dream_lab.goffish.api.AbstractSubgraphComputation;
  * classified into seven types based on the location of its vertices.
  *
  * @author Shivam Singh
+ *
+ * Link to Code : https://github.com/shivam496/Algorithms-Implemented-Using-GoFFish/blob/master/QuadCount.java
+ * Link to Report : https://github.com/shivam496/Algorithms-Implemented-Using-GoFFish/blob/master/Report.pdf
+ * Link to Video : https://drive.google.com/file/d/1P7b9jxJUtx0EraCpdH5GhqH3ySjQShGB
+ *
  */
 
 public class QuadCount extends AbstractSubgraphComputation<LongWritable, LongWritable, LongWritable, BytesWritable, LongWritable, LongWritable, LongWritable> {
@@ -83,7 +88,7 @@ public class QuadCount extends AbstractSubgraphComputation<LongWritable, LongWri
                 	}
                 }
             }
-            System.out.println("Count of Type1 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type1 + "\n");
+            System.out.println("Count of Type1 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type1);
             quadCount += type1;
             // Send message to other Sub-graphs for next Super-Step
             sendMessages(outputMessages);
@@ -153,8 +158,8 @@ public class QuadCount extends AbstractSubgraphComputation<LongWritable, LongWri
                 	}
                 }
             }
-            System.out.println("Count of Type2 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type2 + "\n");
-            System.out.println("Count of Type3 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type3 + "\n");
+            System.out.println("Count of Type2 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type2);
+            System.out.println("Count of Type3 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type3);
             quadCount += type2;
             quadCount += type3;
             // Send message to other Sub-graphs for next Super-Step
@@ -208,7 +213,7 @@ public class QuadCount extends AbstractSubgraphComputation<LongWritable, LongWri
                 	}
                 }
             }
-            System.out.println("Count of Type4 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type4 + "\n");
+            System.out.println("Count of Type4 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type4);
             quadCount += type4;
             // Send message to other Sub-graphs for next Super-Step
             sendMessages(outputMessages);
@@ -249,14 +254,15 @@ public class QuadCount extends AbstractSubgraphComputation<LongWritable, LongWri
                 	}
             	}
             }
-            System.out.println("Count of Type5 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type5 + "\n");
+            System.out.println("Count of Type5 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type5);
             quadCount += type5;
-            System.out.println("Count of Type6 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type6 + "\n");
+            System.out.println("Count of Type6 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type6);
             quadCount += type6;
-            System.out.println("Count of Type7 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type7 + "\n");
+            System.out.println("Count of Type7 4-cycles whose Last Vertex is in Subgraph " + getSubgraph().getSubgraphId().get() + " is : " + type7);
             quadCount += type7;
             
         }
+        System.out.println("");
         // Passing Cummulative Count of all types of 4-cycles in one.
         getSubgraph().setSubgraphValue(new LongWritable(quadCount));
         // Every Sub-graph votes to halt the program
